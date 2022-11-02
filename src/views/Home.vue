@@ -1,18 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div class="home">
+		<van-tabbar route>
+			<van-tabbar-item replace to="/message">消息</van-tabbar-item>
+			<van-tabbar-item replace to="/create">创作</van-tabbar-item>
+			<van-tabbar-item replace to="/center">我</van-tabbar-item>
+		</van-tabbar>
+		<router-view />
+	</div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import { reactive, computed, ref } from 'vue';
 </script>
+
+<style lang="less" scoped>
+.home {
+	padding-bottom: 50px;
+}
+</style>

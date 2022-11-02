@@ -1,0 +1,19 @@
+body {
+	font-size: 18px !important;
+	height: 100vh;
+}
+
+:not([class^='van']) {
+	/* prettier-ignore */
+	margin: 0;
+	padding: 0;
+}
+div:not([class^='van']) {
+	box-sizing: border-box;
+}
+:root {
+	--van-tabbar-background-color: #292929;
+	--van-tabbar-item-text-color: #9e9e9e;
+	--van-tabbar-item-active-color: #fff;
+	--van-tabbar-item-active-background-color: #292929;
+}
