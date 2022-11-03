@@ -12,21 +12,21 @@
 					<van-image fit="fill" :src="item.cover" />
 					<div class="name">{{ item.name }}</div>
 					<div class="edit">
-						<van-button block type="primary">编辑章节</van-button>
+						<van-button block type="primary" @click="$router.push('/upload')">编辑章节</van-button>
 					</div>
 					<div class="more">更多编辑...</div>
 					<div class="steps">
-						<div class="step">
+						<div class="step" @click="$router.push('/activity')">
 							<span><van-icon name="point-gift" /> 活动</span>
 							<van-icon name="checked" color="#59BF31" v-if="item.activity == 1" />
 							<van-icon name="clear" v-else />
 						</div>
-						<div class="step">
+						<div class="step" @click="$router.push('/collection')">
 							<span><van-icon name="diamond" /> 藏品 </span>
 							<van-icon name="checked" color="#59BF31" v-if="item.collection == 1" />
 							<van-icon name="clear" v-else />
 						</div>
-						<div class="step">
+						<div class="step" @click="$router.push('/award')">
 							<span><van-icon name="award" /> 版权包</span>
 							<van-icon name="checked" color="#59BF31" v-if="item.copyright == 1" />
 							<van-icon name="clear" v-else />
@@ -43,22 +43,22 @@ import { reactive, computed, ref } from 'vue';
 const state = reactive({
 	new_name: '',
 	list: [
-		// {
-		// 	id: '1',
-		// 	cover: 'https://pic.huitu.com/pic/20220113/2914792_20220113120552375050_0.jpg',
-		// 	name: '夜的命名术',
-		// 	activity: 1,
-		// 	collection: 1,
-		// 	copyright: 0,
-		// },
-		// {
-		// 	id: '1',
-		// 	cover: 'https://pic3.ntimg.cn/pic/20220218/33810373_141012571121_4.jpg',
-		// 	name: '夜的命名术',
-		// 	activity: 1,
-		// 	collection: 1,
-		// 	copyright: 0,
-		// },
+		{
+			id: '1',
+			cover: 'https://pic.huitu.com/pic/20220113/2914792_20220113120552375050_0.jpg',
+			name: '夜的命名术',
+			activity: 1,
+			collection: 1,
+			copyright: 0,
+		},
+		{
+			id: '1',
+			cover: 'https://pic3.ntimg.cn/pic/20220218/33810373_141012571121_4.jpg',
+			name: '夜的命名术',
+			activity: 1,
+			collection: 1,
+			copyright: 0,
+		},
 	],
 });
 </script>
